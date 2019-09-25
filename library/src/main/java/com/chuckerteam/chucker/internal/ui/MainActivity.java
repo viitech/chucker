@@ -92,7 +92,8 @@ public class MainActivity extends BaseChuckerActivity implements TransactionAdap
 
     @Override
     public void onErrorClick(long throwableId, int position) {
-        ErrorActivity.start(this, throwableId);
+        Intent intent = ErrorActivity.newInstance(this, throwableId);
+        startActivity(intent);
     }
 
     @Override
